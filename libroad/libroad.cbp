@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="libroad" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Release">
+				<Option output="../bin/libroad" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="3" />
+				<Option compiler="gcc" />
+				<Option createDefFile="1" />
+				<Option createStaticLib="1" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add option="-Wall" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add directory="../bin/" />
+				</Linker>
+			</Target>
+			<Target title="Release32">
+				<Option output="../bin32/road" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release32/" />
+				<Option type="3" />
+				<Option compiler="msvc8" />
+				<Option createDefFile="1" />
+				<Option createStaticLib="1" />
+				<Compiler>
+					<Add option="/MD" />
+					<Add option="/EHc" />
+					<Add option="/EHs" />
+					<Add option="/Ox" />
+					<Add option="/Wall" />
+					<Add option="/Zc:wchar_t" />
+					<Add option="/DWIN32" />
+					<Add option="/DNDEBUG" />
+					<Add option="/DLIBROAD_MAKINGDLL" />
+					<Add option="/D_WIN32" />
+					<Add directory="../safenet/C" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add library="hasp_windows_28089" />
+					<Add directory="../bin32" />
+					<Add directory="D:/工作资料/软件修改/盾构导向系统/mtg_tm201508170838/libroad/" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add directory="../sqlite3" />
+			<Add directory="../libele" />
+			<Add directory="../trace" />
+		</Compiler>
+		<Linker>
+			<Add library="sqlite3" />
+			<Add library="libele" />
+			<Add library="elitee" />
+			<Add library="trace" />
+		</Linker>
+		<Unit filename="io.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="road.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="road.h" />
+		<Unit filename="sense.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="vpool.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="vpool.h" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<wxsmith>
+	<object class="wxDialog" name="SegRecordDialog">
+		<size>220,200</size>
+		<pos_arg>1</pos_arg>
+		<size_arg>1</size_arg>
+		<object class="wxPanel" name="ID_PANEL1" variable="panelMain" member="yes">
+			<pos>0,0</pos>
+			<size>220,155</size>
+			<object class="wxStaticText" name="ID_STATICTEXT1" variable="statictext1" member="yes">
+				<label>环号</label>
+				<pos>30,25</pos>
+			</object>
+			<object class="wxStaticText" name="ID_STATICTEXT2" variable="statictext2" member="yes">
+				<label>管环类型</label>
+				<pos>30,60</pos>
+			</object>
+			<object class="wxStaticText" name="ID_STATICTEXT3" variable="statictext3" member="yes">
+				<label>拼装点位</label>
+				<pos>30,95</pos>
+			</object>
+			<object class="wxTextCtrl" name="ID_TEXTCTRL1" variable="segnum" member="yes">
+				<pos>105,23</pos>
+				<size>100,22</size>
+			</object>
+			<object class="wxTextCtrl" name="ID_TEXTCTRL2" variable="location" member="yes">
+				<pos>105,92</pos>
+				<size>100,22</size>
+			</object>
+			<object class="wxChoice" name="ID_CHOICE1" variable="segtype" member="yes">
+				<content>
+					<item>标准环</item>
+					<item>左转弯</item>
+					<item>右转弯</item>
+					<item>通用环</item>
+				</content>
+				<selection>0</selection>
+				<pos>105,57</pos>
+				<size>100,22</size>
+			</object>
+		</object>
+		<object class="wxPanel" name="ID_PANEL2" variable="panelBottom" member="yes">
+			<pos>0,156</pos>
+			<size>220,45</size>
+		</object>
+		<object class="wxStaticLine" name="ID_STATICLINE1" variable="StaticLine1" member="yes">
+			<pos>0,155</pos>
+			<size>220,1</size>
+		</object>
+	</object>
+</wxsmith>

@@ -1,0 +1,14 @@
+#ifndef __HASP_VCODE_H__
+#define __HASP_VCODE_H__
+
+/* HASP vendor code for demo keys
+ * Copyright (C) 2014, SafeNet, Inc. All rights reserved.*/
+#ifdef __cplusplus
+extern "C" {
+#endif
+static unsigned char vendor_code[] =
+    "9F8kYbtnVYT6RFwKCR/HIQFhJZjv9oyrroGChhf5BOjh77l9dBo73hQVwphra+v5JEXEpmZz5ZxnFgpTO4DqJ01zVVEwGUH93NtM9vOHVe5jgMaKfh2dwPEd2S99TJCd2cqbwfWDUcIDWYSh2sAVRVNHu4oJt/4tVxn44yrkQ/qNnrkhR3W66LfDPXhiXXXapBV+PYxPYYMo2nfHg74DLSydgofH7RxiuikSjamjSlmbZocRz43szniwvcpM+TnaV8RkXGvtVXA+APd6m9m5AStvpr+9eUU/TNzeQPY2ekKn39V+wIKa8szfW4GUA3diESWhGazYdQ85HKZvGh35KvorTyQxufao7WkllYpTOqgeBTTK6CunQuBx5A7cFi67BKTNxDWc2WoWcjEPwTSVrKi3nQH3Qxr+9Wm/DAbmBsIgTXM8sajvr6EG2DoeXdFCD498DZTvzUYLSJUAPlqYPAjD4Rdpycybrml93JaDE/VOBGa1eR2ZtSjJhHp95X8EmYiFbUsd+6dga//vqmT8H6/qDl6lrCGz9wFYaKXVb1m/BWIVPQH88Fbra3Bvzdd6CWBICxKOSekHHpMwlGzM07Jl1ynd9KFozoMelWdy8nWGadGEEYgsra91GRcH7Rlvtk/bOuSoBluU/Tn65X6K3pmQDqDr4XUrGMsebcny8M8cTawQlRM4w46D3sYXynO9u60B/ifs5ChLPzzWWFsaforsir2tqUEpwuUj2OAPJKbkqe7rpO/5Ld52bJYUagyPK9yMa5+brnxflnFpmhj+PFuzRqpitUz8bUz7zAu4q/QDj6GOkbmDww2RpZAeN11RciO/uhULR6Baz23v0Ef5qoRftvspWMQ0z2f+dn5EQm97iFphzlQtTJqE6IKIQ2AkcEgu3S/TSvQMnrRnAdMQeSDZmd+dmEkgFFVIbLgm+XcKcDaRJHGyyeagV3Ot4ilyf38PDoyVeBA2/QLIDoDowg==";
+#ifdef __cplusplus
+} // extern "C"
+#endif
+#endif //__HASP_VCODE_H__

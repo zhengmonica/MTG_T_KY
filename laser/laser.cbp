@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="laser" />
+		<Option pch_mode="2" />
+		<Option compiler="msvc8" />
+		<Build>
+			<Target title="Release">
+				<Option output="../bin/laser" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="3" />
+				<Option compiler="msvc8" />
+				<Option createDefFile="1" />
+				<Option createStaticLib="1" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add option="-Wall" />
+					<Add option="-DBUILD_DLL" />
+					<Add option="/DLASER_MAKINGDLL" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add library="user32" />
+					<Add library="winmm" />
+				</Linker>
+			</Target>
+			<Target title="Release32">
+				<Option output="../bin32/laser" imp_lib="$(TARGET_OUTPUT_DIR)$(TARGET_OUTPUT_BASENAME).a" def_file="$(TARGET_OUTPUT_DIR)$(TARGET_OUTPUT_BASENAME).def" prefix_auto="1" extension_auto="1" />
+				<Option type="3" />
+				<Option compiler="msvc8" />
+				<Option createDefFile="1" />
+				<Option createStaticLib="1" />
+				<Compiler>
+					<Add option="/MD" />
+					<Add option="/EHc" />
+					<Add option="/EHs" />
+					<Add option="/O2" />
+					<Add option="/Ox" />
+					<Add option="/W3" />
+					<Add option="/Zc:wchar_t" />
+					<Add option="/DWIN32" />
+					<Add option="/DNDEBUG" />
+					<Add option="/D_WIN32" />
+					<Add option="/DSINGLE_CAM" />
+					<Add directory="Inc" />
+					<Add directory="../trace" />
+					<Add directory="../libele" />
+					<Add directory="../gtime" />
+					<Add directory="../laser" />
+					<Add directory="../libroad" />
+					<Add directory="../opencv" />
+				</Compiler>
+				<Linker>
+					<Add library="DxImageProc" />
+					<Add library="GxIAPI" />
+					<Add library="trace" />
+					<Add library="libele" />
+					<Add library="gtime" />
+					<Add library="bgapi" />
+					<Add library="road" />
+					<Add directory="Lib" />
+					<Add directory="../bin32" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add directory="../gtime" />
+		</Compiler>
+		<Unit filename="CameraDS.cpp" />
+		<Unit filename="CameraDS.h" />
+		<Unit filename="InspSpot.cpp" />
+		<Unit filename="InspSpot.h" />
+		<Unit filename="bgapi_init.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="bgapi_init.h" />
+		<Unit filename="cam.cpp" />
+		<Unit filename="cam.h" />
+		<Unit filename="canny.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="canny.h" />
+		<Unit filename="houghtrans.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="houghtrans.h" />
+		<Unit filename="laserimg.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="laserimg.h" />
+		<Unit filename="matrix.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="matrix.h" />
+		<Unit filename="ovalfit.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="ovalfit.h" />
+		<Unit filename="resample.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="resample.h" />
+		<Unit filename="sobel.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="sobel.h" />
+		<Unit filename="spacialmom.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="spacialmom.h" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<wxsmith>
+	<object class="wxPanel" name="VOffPanel">
+		<pos_arg>1</pos_arg>
+		<size_arg>1</size_arg>
+		<handler function="OnResize" entry="EVT_SIZE" />
+		<object class="wxButton" name="ID_BUTTON1" variable="btnAdd" member="yes">
+			<label>增加</label>
+			<pos>8,8</pos>
+			<handler function="OnBtnAdd" entry="EVT_BUTTON" />
+		</object>
+		<object class="wxButton" name="ID_BUTTON2" variable="btnEdit" member="yes">
+			<label>编辑</label>
+			<pos>8,48</pos>
+			<handler function="OnBtnEdit" entry="EVT_BUTTON" />
+		</object>
+		<object class="wxButton" name="ID_BUTTON3" variable="btnDel" member="yes">
+			<label>删除</label>
+			<pos>8,96</pos>
+			<handler function="OnBtnDel" entry="EVT_BUTTON" />
+		</object>
+		<object class="wxListCtrl" name="ID_LISTCTRL1" subclass="wxListView" variable="listOff" member="yes">
+			<pos>112,16</pos>
+			<style>wxLC_REPORT|wxLC_SINGLE_SEL|wxRAISED_BORDER</style>
+			<handler function="OnlistOffItemActivated" entry="EVT_LIST_ITEM_ACTIVATED" />
+		</object>
+		<object class="wxPanel" name="ID_PANEL1" subclass="MyCanvas" variable="panelGraph" member="yes">
+			<pos>112,120</pos>
+		</object>
+	</object>
+</wxsmith>

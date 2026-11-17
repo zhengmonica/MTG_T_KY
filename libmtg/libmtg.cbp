@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="libmtg" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Release">
+				<Option output="../bin/libmtg" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="3" />
+				<Option compiler="gcc" />
+				<Option createDefFile="1" />
+				<Option createStaticLib="1" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add option="-Wall" />
+					<Add option="-DBUILD_DLL" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add library="mysqlclient" />
+					<Add directory="../bin" />
+				</Linker>
+			</Target>
+			<Target title="Release32">
+				<Option output="../bin32/mtg" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release32/" />
+				<Option type="3" />
+				<Option compiler="msvc8" />
+				<Option createDefFile="1" />
+				<Option createStaticLib="1" />
+				<Compiler>
+					<Add option="/MD" />
+					<Add option="/EHc" />
+					<Add option="/EHs" />
+					<Add option="/Ox" />
+					<Add option="/W3" />
+					<Add option="/Zc:wchar_t" />
+					<Add option="/Zi" />
+					<Add option="/DWIN32" />
+					<Add option="/DNDEBUG" />
+					<Add option="/DLIBMTG_MAKINGDLL" />
+					<Add option="/DSINGLE_CAM" />
+					<Add option="/D_WIN32" />
+					<Add option="/DZHONGMEI_NO" />
+					<Add option="/DUNICODE" />
+					<Add directory="../sqlite3" />
+					<Add directory="../libroad" />
+					<Add directory="../inc" />
+				</Compiler>
+				<Linker>
+					<Add option="/debug" />
+					<Add option="/DEBUG" />
+					<Add library="mysql" />
+					<Add library="libele" />
+					<Add library="LibPlc" />
+					<Add library="sqlite3" />
+					<Add library="WinInet" />
+					<Add library="inc" />
+					<Add directory="../bin32" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-D_WIN32" />
+			<Add directory="../libroad" />
+			<Add directory="../stream" />
+			<Add directory="../gtime" />
+			<Add directory="../laser" />
+			<Add directory="../libtps" />
+			<Add directory="../trace" />
+			<Add directory="./" />
+			<Add directory="../geotrans" />
+			<Add directory="../libele" />
+		</Compiler>
+		<Linker>
+			<Add library="laser" />
+			<Add library="road" />
+			<Add library="tps" />
+			<Add library="stream" />
+			<Add library="gtime" />
+			<Add library="geotrans" />
+			<Add library="trace" />
+		</Linker>
+		<Unit filename="libmtg.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="libmtg.h" />
+		<Unit filename="mtgcal.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="mtgdb.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="mtglog.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="mtgseg.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="mtgsqlite.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="mtgthread.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="web.cpp" />
+		<Extensions>
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

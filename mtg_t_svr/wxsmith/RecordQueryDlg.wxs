@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<wxsmith>
+	<object class="wxDialog" name="RecordQueryDlg">
+		<title>拼装记录查询</title>
+		<size>500,350</size>
+		<id_arg>0</id_arg>
+		<object class="wxPanel" name="ID_PANEL1" variable="PanelMain" member="yes">
+			<pos>0,0</pos>
+			<size>500,350</size>
+			<object class="wxPanel" name="ID_PANEL2" variable="PanelTop" member="yes">
+				<pos>0,0</pos>
+				<size>500,50</size>
+				<object class="wxStaticText" name="ID_STATICTEXT1" variable="StaticText1" member="yes">
+					<label>环号：</label>
+					<pos>16,16</pos>
+					<size>40,16</size>
+				</object>
+				<object class="wxStaticText" name="ID_STATICTEXT2" variable="StaticText2" member="yes">
+					<label>~</label>
+					<pos>144,16</pos>
+					<size>16,16</size>
+				</object>
+				<object class="wxTextCtrl" name="ID_TEXTCTRL1" variable="TextCtrl1" member="yes">
+					<pos>64,14</pos>
+					<size>70,22</size>
+				</object>
+				<object class="wxTextCtrl" name="ID_TEXTCTRL2" variable="TextCtrl2" member="yes">
+					<pos>166,14</pos>
+					<size>70,22</size>
+				</object>
+			</object>
+			<object class="wxPanel" name="ID_PANEL3" variable="PanelBody" member="yes">
+				<pos>0,50</pos>
+				<size>500,300</size>
+			</object>
+		</object>
+	</object>
+</wxsmith>

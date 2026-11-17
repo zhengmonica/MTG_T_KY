@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="stream" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Release">
+				<Option output="../bin/libstream" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="3" />
+				<Option compiler="gcc" />
+				<Option createDefFile="1" />
+				<Option createStaticLib="1" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add option="-Wall" />
+					<Add option="-DBUILD_DLL" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add directory="../bin" />
+				</Linker>
+			</Target>
+			<Target title="Release32">
+				<Option output="../bin32/stream" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Releas32e/" />
+				<Option type="3" />
+				<Option compiler="msvc8" />
+				<Option createDefFile="1" />
+				<Option createStaticLib="1" />
+				<Compiler>
+					<Add option="/MD" />
+					<Add option="/EHc" />
+					<Add option="/EHs" />
+					<Add option="/Ox" />
+					<Add option="/Zc:wchar_t" />
+					<Add option="/DWIN32" />
+					<Add option="/DNDEBUG" />
+					<Add option="/DSTREAM_MAKINGDLL" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add library="Ws2_32" />
+					<Add directory="../bin32" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-DSTREAM_MAKING_DLL" />
+			<Add directory="../gtime" />
+		</Compiler>
+		<Linker>
+			<Add library="gtime" />
+		</Linker>
+		<Unit filename="stream.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="stream.h" />
+		<Unit filename="strsvr.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

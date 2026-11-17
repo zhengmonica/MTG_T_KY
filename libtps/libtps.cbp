@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="libtps" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Release">
+				<Option output="../bin/libtps" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="3" />
+				<Option compiler="gcc" />
+				<Option createDefFile="1" />
+				<Option createStaticLib="1" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add option="-Wall" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add directory="../bin" />
+				</Linker>
+			</Target>
+			<Target title="Release32">
+				<Option output="../bin32/tps" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release32/" />
+				<Option type="3" />
+				<Option compiler="msvc8" />
+				<Option createDefFile="1" />
+				<Option createStaticLib="1" />
+				<Compiler>
+					<Add option="/MD" />
+					<Add option="/EHc" />
+					<Add option="/EHs" />
+					<Add option="/Ox" />
+					<Add option="/W3" />
+					<Add option="/Zc:wchar_t" />
+					<Add option="/Zi" />
+					<Add option="-O2" />
+					<Add option="-Wall" />
+					<Add option="/DWIN32" />
+					<Add option="/DNDEBUG" />
+					<Add option="/DLIBTPS_MAKINGDLL" />
+				</Compiler>
+				<Linker>
+					<Add option="/DEBUG" />
+					<Add option="-s" />
+					<Add directory="../bin32" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add directory="../stream" />
+			<Add directory="../gtime" />
+			<Add directory="../libele" />
+		</Compiler>
+		<Linker>
+			<Add library="gtime" />
+			<Add library="stream" />
+			<Add library="trace" />
+		</Linker>
+		<Unit filename="libtps.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="libtps.h" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

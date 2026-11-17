@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<wxsmith>
+	<object class="wxPanel" name="VerticalPanel">
+		<size>424,339</size>
+		<bg>wxSYS_COLOUR_WINDOW</bg>
+		<id_arg>0</id_arg>
+		<handler function="OnResize" entry="EVT_SIZE" />
+		<object class="wxButton" name="ID_BUTTON1" variable="StartPoint" member="yes">
+			<label>起始点</label>
+			<handler function="OnStartPointClick" entry="EVT_BUTTON" />
+		</object>
+		<object class="wxButton" name="ID_BUTTON2" variable="Line" member="yes">
+			<label>直线</label>
+			<handler function="OnLineClick" entry="EVT_BUTTON" />
+		</object>
+		<object class="wxButton" name="ID_BUTTON3" variable="Round" member="yes">
+			<label>圆曲线</label>
+			<handler function="OnRoundClick" entry="EVT_BUTTON" />
+		</object>
+		<object class="wxListCtrl" name="ID_LISTCTRL1" subclass="wxListView" variable="ListVertical" member="yes">
+			<style>wxLC_REPORT|wxLC_SINGLE_SEL|wxRAISED_BORDER</style>
+			<handler function="OnListVerticalItemSelect" entry="EVT_LIST_ITEM_SELECTED" />
+			<handler function="OnListVerticalItemDeselect" entry="EVT_LIST_ITEM_DESELECTED" />
+			<handler function="OnListVerticalItemActivated" entry="EVT_LIST_ITEM_ACTIVATED" />
+		</object>
+		<object class="wxButton" name="ID_BUTTON4" variable="Up" member="yes">
+			<label>向上</label>
+			<handler function="OnUpClick" entry="EVT_BUTTON" />
+		</object>
+		<object class="wxButton" name="ID_BUTTON5" variable="Down" member="yes">
+			<label>向下</label>
+			<handler function="OnDownClick" entry="EVT_BUTTON" />
+		</object>
+		<object class="wxButton" name="ID_BUTTON6" variable="Modify" member="yes">
+			<label>修改</label>
+			<handler function="OnModifyClick" entry="EVT_BUTTON" />
+		</object>
+		<object class="wxButton" name="ID_BUTTON7" variable="Delete" member="yes">
+			<label>删除</label>
+			<handler function="OnDeleteClick" entry="EVT_BUTTON" />
+		</object>
+		<object class="wxPanel" name="ID_PANEL1" subclass="MyCanvas" variable="GraphVertical" member="yes" />
+	</object>
+</wxsmith>

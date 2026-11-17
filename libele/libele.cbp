@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="libele" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Release">
+				<Option output="../bin/libele" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="../bin" />
+				<Option object_output="obj/Release/" />
+				<Option type="3" />
+				<Option compiler="gcc" />
+				<Option createDefFile="1" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add option="-Wall" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add directory="../bin/Release" />
+				</Linker>
+			</Target>
+			<Target title="Release32">
+				<Option output="../bin32/libele" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="../bin32" />
+				<Option object_output="obj/Release32/" />
+				<Option type="3" />
+				<Option compiler="msvc8" />
+				<Option createDefFile="1" />
+				<Compiler>
+					<Add option="/MD" />
+					<Add option="/O2" />
+					<Add option="/Ox" />
+					<Add option="/Wall" />
+					<Add option="/DWIN32" />
+					<Add option="/DLIBELE_MAKINGDLL" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add library="elitee" />
+					<Add library="Iphlpapi" />
+					<Add library="user32" />
+					<Add directory="../bin32" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-D_WIN32" />
+		</Compiler>
+		<Unit filename="elecrypt.h" />
+		<Unit filename="elitee.h" />
+		<Unit filename="libele.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="libele.h" />
+		<Unit filename="ses_err_msg.h" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

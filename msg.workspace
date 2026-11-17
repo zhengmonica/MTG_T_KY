@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_workspace_file>
+	<Workspace title="Workspace">
+		<Project filename="mycanvas/dxflib.cbp" />
+		<Project filename="stream/stream.cbp" />
+		<Project filename="trace/trace.cbp" />
+		<Project filename="libtps/libtps.cbp">
+			<Depends filename="stream/stream.cbp" />
+			<Depends filename="sqlite3/sqlite3.cbp" />
+		</Project>
+		<Project filename="libroad/libroad.cbp">
+			<Depends filename="sqlite3/sqlite3.cbp" />
+		</Project>
+		<Project filename="sqlite3/sqlite3.cbp" />
+		<Project filename="LibPlc/LibPlc.cbp" />
+		<Project filename="laser/laser.cbp" />
+		<Project filename="libmtg/libmtg.cbp">
+			<Depends filename="libtps/libtps.cbp" />
+			<Depends filename="libroad/libroad.cbp" />
+		</Project>
+		<Project filename="LaserTarget/LaserTarget.cbp" />
+		<Project filename="ResetTarget/ResetTarget.cbp" />
+		<Project filename="mtg_t_cli/mtg_t_cli.cbp" />
+		<Project filename="mtg_t_svr/mtg_t_svr.cbp">
+			<Depends filename="libmtg/libmtg.cbp" />
+		</Project>
+	</Workspace>
+</CodeBlocks_workspace_file>

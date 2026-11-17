@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<wxsmith>
+	<object class="wxDialog" name="ResetTargetDialog">
+		<title>恢复工具</title>
+		<size>400,240</size>
+		<id_arg>0</id_arg>
+		<object class="wxPanel" name="ID_PANEL1" variable="Panel1" member="yes">
+			<pos>0,0</pos>
+			<size>400,240</size>
+			<object class="wxPanel" name="ID_PANEL3" variable="Panel3" member="yes">
+				<pos>0,180</pos>
+				<size>400,64</size>
+				<object class="wxButton" name="ID_BUTTON1" variable="Button1" member="yes">
+					<label>读取数据</label>
+					<pos>96,16</pos>
+					<size>75,32</size>
+					<handler function="OnReadClick" entry="EVT_BUTTON" />
+				</object>
+				<object class="wxButton" name="ID_BUTTON2" variable="Button2" member="yes">
+					<label>清空数据</label>
+					<pos>232,16</pos>
+					<size>75,32</size>
+					<handler function="OnClearClick" entry="EVT_BUTTON" />
+				</object>
+				<object class="wxStaticLine" name="ID_STATICLINE1" variable="StaticLine1" member="yes">
+					<pos>0,1</pos>
+					<size>400,1</size>
+				</object>
+			</object>
+		</object>
+		<object class="wxPanel" name="ID_PANEL2" variable="Panel2" member="yes">
+			<pos>0,0</pos>
+			<size>400,180</size>
+			<handler function="OnPaintMain" entry="EVT_PAINT" />
+		</object>
+	</object>
+</wxsmith>

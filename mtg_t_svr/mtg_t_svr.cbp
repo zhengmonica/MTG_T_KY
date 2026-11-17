@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="mtg_t_ky_svr" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Release">
+				<Option output="../bin/mtg_t_svr" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="../bin" />
+				<Option object_output="obj/Release" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Option projectLinkerOptionsRelation="2" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add option="`wx-config --cflags`" />
+					<Add directory="../geotrans" />
+					<Add directory="../mycanvas" />
+					<Add directory="../libmsg" />
+					<Add directory="../libroad" />
+					<Add directory="../stream" />
+					<Add directory="../gtime" />
+					<Add directory="../laser" />
+					<Add directory="../libtps" />
+					<Add directory="../freechart/include" />
+					<Add directory="../trace" />
+					<Add directory="$(#wx)/include" />
+					<Add directory="$(#wx)/contrib/include" />
+				</Compiler>
+				<ResourceCompiler>
+					<Add directory="$(#wx)/include" />
+				</ResourceCompiler>
+				<Linker>
+					<Add option="-s" />
+					<Add option="`wx-config --libs`" />
+					<Add library="mycanvas" />
+					<Add library="laser" />
+					<Add library="tps" />
+					<Add library="stream" />
+					<Add library="gtime" />
+					<Add library="road" />
+					<Add library="msg" />
+					<Add library="sqlite3" />
+					<Add library="geotrans" />
+					<Add library="unicap" />
+					<Add library="trace" />
+					<Add library="freechart" />
+					<Add directory="../bin" />
+				</Linker>
+			</Target>
+			<Target title="Release32">
+				<Option output="../bin32/MTG_T_KY_SVR" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="../bin32" />
+				<Option object_output="obj/Release32" />
+				<Option type="0" />
+				<Option compiler="msvc8" />
+				<Option projectLinkerOptionsRelation="2" />
+				<Compiler>
+					<Add option="/MD" />
+					<Add option="/EHc" />
+					<Add option="/EHs" />
+					<Add option="/Ox" />
+					<Add option="/W3" />
+					<Add option="/Zc:wchar_t" />
+					<Add option="/Zi" />
+					<Add option='/FI&quot;wx_pch.h&quot;' />
+					<Add option='/Yc&quot;wx_pch.h&quot;' />
+					<Add option='/Fp&quot;obj\Release32\msg_t.pch&quot;' />
+					<Add option="/DWIN32" />
+					<Add option="/D_WIN32" />
+					<Add option="/D__WIN32__" />
+					<Add option="/D__WXMSW__" />
+					<Add option="/DWXUSINGDLL" />
+					<Add option="/DwxUSE_UNICODE" />
+					<Add option="/D_WINDOWS" />
+					<Add option="/D_CRT_SECURE_DEPRECATE" />
+					<Add option="/D_CRT_NONSTDC_NO_DEPRECATE" />
+					<Add option="/D_CRT_SECURE_NO_WARNINGS" />
+					<Add option="/D_VC80_UPGRADE=0x0600" />
+					<Add option="/DWX_PRECOMP" />
+					<Add option="/DSINGLE_CAM" />
+					<Add directory="../geotrans" />
+					<Add directory="../mycanvas" />
+					<Add directory="../libmtg" />
+					<Add directory="../libroad" />
+					<Add directory="../stream" />
+					<Add directory="../gtime" />
+					<Add directory="../laser" />
+					<Add directory="../libtps" />
+					<Add directory="../freechart/include" />
+					<Add directory="../trace" />
+					<Add directory="$(#wx)/include" />
+					<Add directory="$(#wx)/lib/vc_dll/mswu" />
+					<Add directory="../libele" />
+					<Add directory="$(#wx)/lib/gcc_dll" />
+					<Add directory="../DXFCanvas" />
+					<Add directory="../LibPlc" />
+					<Add directory="../safenet/C" />
+					<Add directory="../inc" />
+				</Compiler>
+				<ResourceCompiler>
+					<Add directory="$(#wx)/include" />
+					<Add directory="$(#wx)/lib/vc_dll/include" />
+				</ResourceCompiler>
+				<Linker>
+					<Add option="/debug" />
+					<Add option="/DEBUG" />
+					<Add library="mycanvas" />
+					<Add library="laser" />
+					<Add library="tps" />
+					<Add library="stream" />
+					<Add library="gtime" />
+					<Add library="road" />
+					<Add library="mtg" />
+					<Add library="sqlite3" />
+					<Add library="geotrans" />
+					<Add library="trace" />
+					<Add library="wxmsw28u" />
+					<Add library="libele" />
+					<Add library="elitee" />
+					<Add library="freechart" />
+					<Add library="LibPlc" />
+					<Add library="dxfcanvas" />
+					<Add library="hasp_windows_28089" />
+					<Add library="inc" />
+					<Add directory="../bin32" />
+					<Add directory="$(#wx)/lib/vc_dll" />
+					<Add directory="$(#wx)/lib/gcc_dll" />
+				</Linker>
+			</Target>
+		</Build>
+		<Unit filename="BasketDlg.cpp" />
+		<Unit filename="BasketDlg.h" />
+		<Unit filename="BlockDlg.cpp" />
+		<Unit filename="BlockDlg.h" />
+		<Unit filename="CircleFit.cpp" />
+		<Unit filename="CircleFit.h" />
+		<Unit filename="ConfigDlg.cpp" />
+		<Unit filename="ConfigDlg.h" />
+		<Unit filename="ConfirmDlg.cpp" />
+		<Unit filename="ConfirmDlg.h" />
+		<Unit filename="DecodeCommand.cpp" />
+		<Unit filename="DistDlg.cpp" />
+		<Unit filename="DistDlg.h" />
+		<Unit filename="DriverDlg.h" />
+		<Unit filename="DtaDlg.cpp" />
+		<Unit filename="DtaDlg.h" />
+		<Unit filename="DutyDlg.h" />
+		<Unit filename="H_Line.cpp" />
+		<Unit filename="H_Line.h" />
+		<Unit filename="H_Moderate.cpp" />
+		<Unit filename="H_Moderate.h" />
+		<Unit filename="H_Round.cpp" />
+		<Unit filename="H_Round.h" />
+		<Unit filename="H_StartPoint.cpp" />
+		<Unit filename="H_StartPoint.h" />
+		<Unit filename="HeadMileDlg.cpp" />
+		<Unit filename="HeadMileDlg.h" />
+		<Unit filename="Ini.cpp" />
+		<Unit filename="Ini.h" />
+		<Unit filename="JackDlg.cpp" />
+		<Unit filename="JackDlg.h" />
+		<Unit filename="KeyBoard.cpp" />
+		<Unit filename="KeyBoard.h" />
+		<Unit filename="KeyDlg.cpp" />
+		<Unit filename="KeyDlg.h" />
+		<Unit filename="Language.cpp" />
+		<Unit filename="Language.h" />
+		<Unit filename="LogDialog.cpp" />
+		<Unit filename="LogDialog.h" />
+		<Unit filename="MDButtonList.cpp" />
+		<Unit filename="MDButtonList.h" />
+		<Unit filename="MapSettingDlg.cpp" />
+		<Unit filename="MapSettingDlg.h" />
+		<Unit filename="MapViewDlg.cpp" />
+		<Unit filename="MapViewDlg.h" />
+		<Unit filename="ModifySegDialog.cpp" />
+		<Unit filename="ModifySegDialog.h" />
+		<Unit filename="MyCheckDlg.cpp" />
+		<Unit filename="MyCheckDlg.h" />
+		<Unit filename="MyHistoryDlg.h" />
+		<Unit filename="MyQueryDlg.cpp" />
+		<Unit filename="MyQueryDlg.h" />
+		<Unit filename="MySetupDlg.cpp" />
+		<Unit filename="MySetupDlg.h" />
+		<Unit filename="MydoctorDlg.cpp" />
+		<Unit filename="MydoctorDlg.h" />
+		<Unit filename="MyfileDlg.cpp" />
+		<Unit filename="MyfileDlg.h" />
+		<Unit filename="MyjustDlg.h" />
+		<Unit filename="MypointDlg.cpp" />
+		<Unit filename="MypointDlg.h" />
+		<Unit filename="OffDialog.cpp" />
+		<Unit filename="OffDialog.h" />
+		<Unit filename="PasswordDialog.cpp" />
+		<Unit filename="PasswordDialog.h" />
+		<Unit filename="RecordQueryDlg.cpp" />
+		<Unit filename="RecordQueryDlg.h" />
+		<Unit filename="RingListDlg.cpp" />
+		<Unit filename="RingListDlg.h" />
+		<Unit filename="SegRecordDialog.cpp" />
+		<Unit filename="SegRecordDialog.h" />
+		<Unit filename="SegmentDlg.cpp" />
+		<Unit filename="SegmentDlg.h" />
+		<Unit filename="StationDlg.cpp" />
+		<Unit filename="StationDlg.h" />
+		<Unit filename="TpsDlg.cpp" />
+		<Unit filename="TpsDlg.h" />
+		<Unit filename="UserEditDlg.cpp" />
+		<Unit filename="UserEditDlg.h" />
+		<Unit filename="V_Line.cpp" />
+		<Unit filename="V_Line.h" />
+		<Unit filename="V_Round.cpp" />
+		<Unit filename="V_Round.h" />
+		<Unit filename="V_StartPoint.cpp" />
+		<Unit filename="V_StartPoint.h" />
+		<Unit filename="dmsrad.cpp" />
+		<Unit filename="dmsrad.h" />
+		<Unit filename="enumser.cpp" />
+		<Unit filename="enumser.h" />
+		<Unit filename="mtg_t_svrApp.cpp" />
+		<Unit filename="mtg_t_svrApp.h" />
+		<Unit filename="mtg_t_svrMain.cpp" />
+		<Unit filename="mtg_t_svrMain.h" />
+		<Unit filename="ping.cpp" />
+		<Unit filename="ping.h" />
+		<Unit filename="resource.rc">
+			<Option compilerVar="WINDRES" />
+			<Option target="Release32" />
+		</Unit>
+		<Unit filename="wxMyGrid.cpp" />
+		<Unit filename="wxMyGrid.h" />
+		<Unit filename="wxMyTextCtrl.cpp" />
+		<Unit filename="wxMyTextCtrl.h" />
+		<Unit filename="wx_pch.h">
+			<Option compile="1" />
+			<Option weight="0" />
+		</Unit>
+		<Unit filename="wxsmith/DistDlg.wxs" />
+		<Unit filename="wxsmith/RecordQueryDlg.wxs" />
+		<Unit filename="wxsmith/TailSpaceDlg.wxs" />
+		<Unit filename="wxsmith/msg_tframe.wxs" />
+		<Extensions>
+			<DoxyBlocks>
+				<comment_style block="0" line="0" />
+				<doxyfile_project />
+				<doxyfile_build />
+				<doxyfile_warnings />
+				<doxyfile_output />
+				<doxyfile_dot />
+				<general />
+			</DoxyBlocks>
+			<lib_finder disable_auto="1" />
+			<wxsmith version="1">
+				<gui name="wxWidgets" src="msg_tApp.cpp" main="msg_tFrame" init_handlers="necessary" language="CPP" />
+				<resources>
+					<wxFrame wxs="wxsmith/msg_tframe.wxs" src="msg_tMain.cpp" hdr="msg_tMain.h" fwddecl="0" i18n="1" name="msg_tFrame" language="CPP" />
+					<wxPanel wxs="wxsmith/HorizonPanel.wxs" src="HorizonPanel.cpp" hdr="HorizonPanel.h" fwddecl="0" i18n="1" name="HorizonPanel" language="CPP" />
+					<wxPanel wxs="wxsmith/VerticalPanel.wxs" src="VerticalPanel.cpp" hdr="VerticalPanel.h" fwddecl="0" i18n="1" name="VerticalPanel" language="CPP" />
+					<wxDialog wxs="wxsmith/H_StartPoint.wxs" src="H_StartPoint.cpp" hdr="H_StartPoint.h" fwddecl="0" i18n="1" name="H_StartPoint" language="CPP" />
+					<wxDialog wxs="wxsmith/H_Line.wxs" src="H_Line.cpp" hdr="H_Line.h" fwddecl="0" i18n="1" name="H_Line" language="CPP" />
+					<wxDialog wxs="wxsmith/H_Round.wxs" src="H_Round.cpp" hdr="H_Round.h" fwddecl="0" i18n="1" name="H_Round" language="CPP" />
+					<wxDialog wxs="wxsmith/H_Moderate.wxs" src="H_Moderate.cpp" hdr="H_Moderate.h" fwddecl="0" i18n="1" name="H_Moderate" language="CPP" />
+					<wxDialog wxs="wxsmith/V_StartPoint.wxs" src="V_StartPoint.cpp" hdr="V_StartPoint.h" fwddecl="0" i18n="1" name="V_StartPoint" language="CPP" />
+					<wxDialog wxs="wxsmith/V_Line.wxs" src="V_Line.cpp" hdr="V_Line.h" fwddecl="0" i18n="1" name="V_Line" language="CPP" />
+					<wxDialog wxs="wxsmith/V_Round.wxs" src="V_Round.cpp" hdr="V_Round.h" fwddecl="0" i18n="1" name="V_Round" language="CPP" />
+					<wxDialog wxs="wxsmith/DtaDlg.wxs" src="DtaDlg.cpp" hdr="DtaDlg.h" fwddecl="0" i18n="1" name="DtaDlg" language="CPP" />
+					<wxPanel wxs="wxsmith/HOffPanel.wxs" src="HOffPanel.cpp" hdr="HOffPanel.h" fwddecl="0" i18n="1" name="HOffPanel" language="CPP" />
+					<wxPanel wxs="wxsmith/VOffPanel.wxs" src="VOffPanel.cpp" hdr="VOffPanel.h" fwddecl="0" i18n="1" name="VOffPanel" language="CPP" />
+					<wxDialog wxs="wxsmith/OffDialog.wxs" src="OffDialog.cpp" hdr="OffDialog.h" fwddecl="0" i18n="1" name="OffDialog" language="CPP" />
+					<wxDialog wxs="wxsmith/ConfigDialog.wxs" src="ConfigDialog.cpp" hdr="ConfigDialog.h" fwddecl="0" i18n="1" name="ConfigDialog" language="CPP" />
+					<wxDialog wxs="wxsmith/LogDialog.wxs" src="LogDialog.cpp" hdr="LogDialog.h" fwddecl="0" i18n="1" name="LogDialog" language="CPP" />
+					<wxDialog wxs="wxsmith/TailSpaceDlg.wxs" src="TailSpaceDlg.cpp" hdr="TailSpaceDlg.h" fwddecl="0" i18n="1" name="TailSpaceDlg" language="CPP" />
+					<wxDialog wxs="wxsmith/DistDlg.wxs" src="DistDlg.cpp" hdr="DistDlg.h" fwddecl="0" i18n="1" name="DistDlg" language="CPP" />
+					<wxDialog wxs="wxsmith/RecordQueryDlg.wxs" src="RecordQueryDlg.cpp" hdr="RecordQueryDlg.h" fwddecl="0" i18n="1" name="RecordQueryDlg" language="CPP" />
+				</resources>
+			</wxsmith>
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="ResetTarget" />
+		<Option pch_mode="2" />
+		<Option compiler="msvc8" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/ResetTarget" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="0" />
+				<Option compiler="msvc8" />
+				<Option projectLinkerOptionsRelation="2" />
+				<Compiler>
+					<Add option="/Zi" />
+					<Add option="/D_DEBUG" />
+					<Add option='/Fp&quot;obj\Debug\ResetTarget.pch&quot;' />
+					<Add option="/MDd" />
+					<Add directory="$(#wx28)/lib/vc_dll/mswu" />
+				</Compiler>
+				<ResourceCompiler>
+					<Add directory="$(#wx28)/lib/vc_dll/mswu" />
+				</ResourceCompiler>
+				<Linker>
+					<Add option="/DEBUG" />
+					<Add option="/NODEFAULTLIB:libcmtd.lib" />
+					<Add option="/NODEFAULTLIB:msvcrt.lib" />
+					<Add library="msvcrtd.lib" />
+					<Add library="wxmsw28u.lib" />
+					<Add directory="$(#wx28)/lib/vc_dll" />
+				</Linker>
+				<ExtraCommands>
+					<Add after='mt.exe /nologo /manifest &quot;bin\Debug\ResetTarget.exe.manifest&quot; /outputresource:&quot;bin\Debug\ResetTarget.exe&quot;;1' />
+				</ExtraCommands>
+			</Target>
+			<Target title="Release32">
+				<Option output="bin/Release32/ResetTarget" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release32/" />
+				<Option type="0" />
+				<Option compiler="msvc8" />
+				<Option projectLinkerOptionsRelation="2" />
+				<Compiler>
+					<Add option="/MD" />
+					<Add option="/O2" />
+					<Add option="/Ox" />
+					<Add option='/Fp&quot;obj\Release32\ResetTarget.pch&quot;' />
+					<Add option="/DNDEBUG" />
+					<Add directory="$(#wx28)/lib/vc_dll/mswu" />
+					<Add directory="../safenet/C" />
+				</Compiler>
+				<ResourceCompiler>
+					<Add directory="$(#wx28)/lib/vc_dll/mswu" />
+				</ResourceCompiler>
+				<Linker>
+					<Add option="/NODEFAULTLIB:libcmt.lib" />
+					<Add library="msvcrt.lib" />
+					<Add library="wxmsw28u.lib" />
+					<Add library="mysql" />
+					<Add library="hasp_windows_91092" />
+					<Add directory="$(#wx28)/lib/vc_dll" />
+					<Add directory="../bin32" />
+				</Linker>
+				<ExtraCommands>
+					<Add after='mt.exe /nologo /manifest &quot;bin\Release32\ResetTarget.exe.manifest&quot; /outputresource:&quot;bin\Release32\ResetTarget.exe&quot;;1' />
+				</ExtraCommands>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="/DWIN32" />
+			<Add option="/D__WIN32__" />
+			<Add option="/D__WXMSW__" />
+			<Add option="/DWXUSINGDLL" />
+			<Add option="/DwxUSE_UNICODE" />
+			<Add option="/D_WINDOWS" />
+			<Add option="/EHs" />
+			<Add option="/EHc" />
+			<Add option="/D_CRT_SECURE_DEPRECATE" />
+			<Add option="/D_CRT_NONSTDC_NO_DEPRECATE" />
+			<Add option="/D_CRT_SECURE_NO_WARNINGS" />
+			<Add option="/Zc:wchar_t" />
+			<Add option="/D_VC80_UPGRADE=0x0600" />
+			<Add option='/FI&quot;wx_pch.h&quot;' />
+			<Add option='/Yc&quot;wx_pch.h&quot;' />
+			<Add option="/W3" />
+			<Add directory="$(#wx28)/include" />
+		</Compiler>
+		<ResourceCompiler>
+			<Add directory="$(#wx28)/include" />
+		</ResourceCompiler>
+		<Linker>
+			<Add option="/INCREMENTAL:NO" />
+			<Add option="/SUBSYSTEM:WINDOWS" />
+			<Add library="winmm.lib" />
+			<Add library="rpcrt4.lib" />
+		</Linker>
+		<Unit filename="ResetTargetApp.cpp" />
+		<Unit filename="ResetTargetApp.h" />
+		<Unit filename="ResetTargetMain.cpp" />
+		<Unit filename="ResetTargetMain.h" />
+		<Unit filename="resource.rc">
+			<Option compilerVar="WINDRES" />
+		</Unit>
+		<Unit filename="wx_pch.h" />
+		<Unit filename="wxsmith/ResetTargetdialog.wxs" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+			<wxsmith version="1">
+				<gui name="wxWidgets" src="ResetTargetApp.cpp" main="ResetTargetDialog" init_handlers="necessary" language="CPP" />
+				<resources>
+					<wxDialog wxs="wxsmith/ResetTargetdialog.wxs" src="ResetTargetMain.cpp" hdr="ResetTargetMain.h" fwddecl="0" i18n="1" name="ResetTargetDialog" language="CPP" />
+				</resources>
+			</wxsmith>
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

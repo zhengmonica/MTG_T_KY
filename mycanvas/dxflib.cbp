@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="mycanvas" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Release">
+				<Option output="../bin/libmycanvas" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="../bin" />
+				<Option object_output="obj/Release" />
+				<Option type="3" />
+				<Option compiler="gcc" />
+				<Option createDefFile="1" />
+				<Option createStaticLib="1" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add option="-Wall" />
+					<Add option="`wx-config --cflags`" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add option="`wx-config --libs`" />
+					<Add library="geotrans" />
+					<Add directory="../bin" />
+				</Linker>
+			</Target>
+			<Target title="Release32">
+				<Option output="../bin32/mycanvas" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="../bin32" />
+				<Option object_output="obj/Release32" />
+				<Option type="3" />
+				<Option compiler="msvc8" />
+				<Option createDefFile="1" />
+				<Option createStaticLib="1" />
+				<Compiler>
+					<Add option="/MD" />
+					<Add option="/EHc" />
+					<Add option="/EHs" />
+					<Add option="/O2" />
+					<Add option="/Ox" />
+					<Add option="/W3" />
+					<Add option="/Zc:wchar_t" />
+					<Add option="/DWIN32" />
+					<Add option="/D__WIN32__" />
+					<Add option="/D__WXMSW__" />
+					<Add option="/DwxUSE_UNICODE" />
+					<Add option="/DWXUSINGDLL" />
+					<Add option="/D_WINDOWS" />
+					<Add option="/D_CRT_SECURE_DEPRECATE" />
+					<Add option="/D_CRT_NONSTDC_NO_DEPRECATE" />
+					<Add option="/D_CRT_SECURE_NO_WARNINGS" />
+					<Add option="/D_VC80_UPGRADE=0x0600" />
+					<Add option="/DNDEBUG" />
+					<Add option="/DDXFLIB_MAKINGDLL" />
+					<Add directory="$(#wx)/include" />
+					<Add directory="$(#wx)/lib/vc_dll/mswu" />
+				</Compiler>
+				<ResourceCompiler>
+					<Add directory="$(#wx)/include" />
+				</ResourceCompiler>
+				<Linker>
+					<Add library="geotrans" />
+					<Add library="wxmsw28u" />
+					<Add directory="../bin32" />
+					<Add directory="$(#wx)/lib/vc_dll" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add directory="../include" />
+			<Add directory="../geotrans" />
+		</Compiler>
+		<Unit filename="../libmtg/mtgdist.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Map.cpp" />
+		<Unit filename="Map.h" />
+		<Unit filename="MyCanvas.cpp" />
+		<Unit filename="MyCanvas.h" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

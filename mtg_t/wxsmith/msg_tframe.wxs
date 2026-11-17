@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<wxsmith>
+	<object class="wxFrame" name="msg_tFrame">
+		<title>MSG-T米度盾构引导系统</title>
+		<size>1024,768</size>
+		<style>0</style>
+		<object class="wxPanel" name="ID_PANEL1" variable="panelMain" member="yes">
+			<object class="wxButton" name="ID_BUTTON1" variable="btnStart" member="yes">
+				<label>掘进</label>
+				<pos>28,600</pos>
+				<size>72,32</size>
+			</object>
+			<object class="wxButton" name="ID_BUTTON2" variable="btnEnd" member="yes">
+				<label>停止掘进</label>
+				<pos>128,600</pos>
+				<size>72,32</size>
+			</object>
+			<object class="wxButton" name="ID_BUTTON3" variable="btnErect" member="yes">
+				<label>管环拼装</label>
+				<pos>228,600</pos>
+				<size>72,32</size>
+			</object>
+			<object class="wxButton" name="ID_BUTTON4" variable="btnConfig" member="yes">
+				<label>设置</label>
+				<pos>328,600</pos>
+				<size>72,32</size>
+			</object>
+			<object class="wxButton" name="ID_BUTTON5" variable="btnSetup" member="yes">
+				<label>搬站</label>
+				<pos>428,600</pos>
+				<size>72,32</size>
+			</object>
+			<object class="wxButton" name="ID_BUTTON6" variable="btnCheck" member="yes">
+				<label>检核</label>
+				<pos>528,600</pos>
+				<size>72,32</size>
+			</object>
+			<object class="wxButton" name="ID_BUTTON7" variable="btnQuery" member="yes">
+				<label>查询</label>
+				<pos>628,600</pos>
+				<size>72,32</size>
+			</object>
+			<object class="wxButton" name="ID_BUTTON10" variable="btnQuit" member="yes">
+				<label>退出</label>
+				<pos>928,600</pos>
+				<size>72,32</size>
+			</object>
+			<object class="wxButton" name="ID_BUTTON8" variable="btnDta" member="yes">
+				<label>DTA</label>
+				<pos>728,600</pos>
+				<size>72,32</size>
+			</object>
+			<object class="wxPanel" name="ID_PANEL3" variable="panelSegment" member="yes">
+				<pos>0,0</pos>
+				<size>200,125</size>
+				<handler function="OnPaintSegment" entry="EVT_PAINT" />
+			</object>
+			<object class="wxPanel" name="ID_PANEL4" variable="panelDiff" member="yes">
+				<pos>200,0</pos>
+				<size>634,125</size>
+			</object>
+			<object class="wxPanel" name="ID_PANEL5" variable="panelLogo" member="yes">
+				<pos>834,0</pos>
+				<size>190,125</size>
+				<handler function="OnPaintLogo" entry="EVT_PAINT" />
+			</object>
+			<object class="wxPanel" name="ID_PANEL6" variable="panelAngle" member="yes">
+				<pos>0,125</pos>
+				<size>200,220</size>
+			</object>
+			<object class="wxPanel" name="ID_PANEL7" variable="panelBubble" member="yes">
+				<pos>0,495</pos>
+				<size>200,100</size>
+			</object>
+			<object class="wxPanel" name="ID_PANEL8" variable="panelHorizon" member="yes">
+				<pos>470,125</pos>
+				<size>364,135</size>
+			</object>
+			<object class="wxPanel" name="ID_PANEL9" variable="panelMetric" member="yes">
+				<pos>200,125</pos>
+				<size>270,270</size>
+			</object>
+			<object class="wxPanel" name="ID_PANEL10" variable="panelVertical" member="yes">
+				<pos>470,260</pos>
+				<size>484,135</size>
+			</object>
+			<object class="wxPanel" name="ID_PANEL11" variable="panelGraph" member="yes">
+				<pos>200,495</pos>
+				<size>634,100</size>
+			</object>
+			<object class="wxPanel" name="ID_PANEL12" variable="panelChain" member="yes">
+				<pos>834,125</pos>
+				<size>190,370</size>
+			</object>
+			<object class="wxPanel" name="ID_PANEL13" variable="panelStatus" member="yes">
+				<pos>0,345</pos>
+				<size>200,150</size>
+			</object>
+			<object class="wxPanel" name="ID_PANEL15" variable="panelLog" member="yes">
+				<pos>0,640</pos>
+				<size>1024,100</size>
+				<object class="wxListView" name="ID_LISTVIEW1" variable="listLog" member="yes">
+					<pos>0,0</pos>
+					<size>960,88</size>
+					<style>wxLC_REPORT</style>
+				</object>
+				<object class="wxBitmapButton" name="ID_BITMAPBUTTON3" variable="btnLog" member="yes">
+					<pos>960,0</pos>
+					<size>64,88</size>
+				</object>
+			</object>
+			<object class="wxPanel" name="ID_PANEL2" variable="panelLanguage" member="yes">
+				<pos>834,495</pos>
+				<size>190,100</size>
+				<object class="wxBitmapButton" name="ID_BITMAPBUTTON1" variable="btnEnglish" member="yes">
+					<bitmap>plugins/english.png</bitmap>
+					<default>1</default>
+					<pos>128,32</pos>
+					<handler function="OnBtnEnglish" entry="EVT_BUTTON" />
+				</object>
+				<object class="wxBitmapButton" name="ID_BITMAPBUTTON2" variable="btnChinese" member="yes">
+					<bitmap>plugins/chinese.png</bitmap>
+					<default>1</default>
+					<pos>40,32</pos>
+					<handler function="OnBtnChinese" entry="EVT_BUTTON" />
+				</object>
+			</object>
+		</object>
+		<object class="wxStatusBar" name="ID_STATUSBAR1" variable="StatusBar1" member="yes">
+			<fields>1</fields>
+			<widths>-10</widths>
+			<styles>wxSB_NORMAL</styles>
+		</object>
+	</object>
+</wxsmith>

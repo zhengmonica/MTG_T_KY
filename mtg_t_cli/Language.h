@@ -1,0 +1,7 @@
+﻿#ifndef LANGUAGE_H_INCLUDED
+#define LANGUAGE_H_INCLUDED
+
+#define MTG_LANG_COUNT  2000
+
+
+#endif // LANGUAGE_H_INCLUDED

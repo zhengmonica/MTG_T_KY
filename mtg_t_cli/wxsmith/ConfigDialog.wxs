@@ -1,0 +1,635 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<wxsmith>
+	<object class="wxDialog" name="ConfigDialog">
+		<id_arg>0</id_arg>
+		<style>wxCAPTION</style>
+		<object class="wxFlexGridSizer" variable="FlexGridSizer1" member="no">
+			<cols>1</cols>
+			<object class="sizeritem">
+				<object class="wxStaticText" name="ID_STATICTEXT1" variable="StaticText1" member="yes">
+					<label>设置</label>
+					<font>
+						<size>12</size>
+						<style>normal</style>
+						<weight>bold</weight>
+						<underlined>0</underlined>
+						<family>swiss</family>
+						<face>Arial</face>
+					</font>
+				</object>
+				<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+				<border>5</border>
+				<option>1</option>
+			</object>
+			<object class="sizeritem">
+				<object class="wxStaticLine" name="ID_STATICLINE1" variable="StaticLine1" member="yes">
+					<size>600,-1</size>
+				</object>
+				<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+				<border>5</border>
+				<option>1</option>
+			</object>
+			<object class="sizeritem">
+				<object class="wxBoxSizer" variable="BoxSizer1" member="no">
+					<object class="sizeritem">
+						<object class="wxNotebook" name="ID_NOTEBOOK1" variable="Notebook1" member="yes">
+							<size>600,400</size>
+							<object class="notebookpage">
+								<object class="wxPanel" name="ID_PANEL1" variable="Panel1" member="yes">
+									<object class="wxStaticText" name="ID_STATICTEXT2" variable="StaticText2" member="yes">
+										<label>工程名</label>
+										<pos>32,24</pos>
+									</object>
+									<object class="wxTextCtrl" name="ID_TEXTCTRL1" subclass="wxMyTextCtrl" variable="textPrj" member="yes">
+										<pos>96,24</pos>
+										<size>300,-1</size>
+										<handler function="OntextPrjText" entry="EVT_TEXT" />
+									</object>
+									<object class="wxStaticText" name="ID_STATICTEXT3" variable="StaticText3" member="yes">
+										<label>建设单位</label>
+										<pos>32,64</pos>
+									</object>
+									<object class="wxTextCtrl" name="ID_TEXTCTRL2" subclass="wxMyTextCtrl" variable="textCompany" member="yes">
+										<pos>96,64</pos>
+										<size>300,-1</size>
+										<handler function="OntextCompanyText" entry="EVT_TEXT" />
+									</object>
+									<object class="wxStaticText" name="ID_STATICTEXT4" variable="StaticText4" member="yes">
+										<label>建设时间</label>
+										<pos>32,104</pos>
+									</object>
+									<object class="wxTextCtrl" name="ID_TEXTCTRL3" subclass="wxMyTextCtrl" variable="textTime" member="yes">
+										<pos>96,104</pos>
+										<size>300,-1</size>
+										<handler function="OntextTimeText" entry="EVT_TEXT" />
+									</object>
+									<object class="wxStaticText" name="ID_STATICTEXT5" variable="StaticText5" member="yes">
+										<label>项目经理</label>
+										<pos>32,144</pos>
+									</object>
+									<object class="wxTextCtrl" name="ID_TEXTCTRL4" subclass="wxMyTextCtrl" variable="textAuthor" member="yes">
+										<pos>96,144</pos>
+										<size>300,-1</size>
+										<handler function="OntextAuthorText" entry="EVT_TEXT" />
+									</object>
+									<object class="wxStaticText" name="ID_STATICTEXT6" variable="StaticText6" member="yes">
+										<label>备注</label>
+										<pos>32,184</pos>
+									</object>
+									<object class="wxTextCtrl" name="ID_TEXTCTRL5" subclass="wxMyTextCtrl" variable="textRemarks" member="yes">
+										<pos>96,192</pos>
+										<size>400,150</size>
+										<style>wxTE_MULTILINE|wxVSCROLL</style>
+										<handler function="OntextRemarksText" entry="EVT_TEXT" />
+									</object>
+								</object>
+								<label>工程信息</label>
+							</object>
+							<object class="notebookpage">
+								<object class="wxPanel" name="ID_PANEL2" variable="Panel2" member="yes">
+									<object class="wxStaticText" name="ID_STATICTEXT26" variable="StaticText25" member="yes">
+										<label>激光靶编号</label>
+										<pos>32,24</pos>
+									</object>
+									<object class="wxTextCtrl" name="ID_TEXTCTRL35" subclass="wxMyTextCtrl" variable="TargetId" member="yes">
+										<pos>126,24</pos>
+										<enabled>0</enabled>
+									</object>
+									<object class="wxStaticText" name="ID_STATICTEXT28" variable="StaticText27" member="yes">
+										<label>棱镜常数(mm)</label>
+										<pos>32,64</pos>
+									</object>
+									<object class="wxTextCtrl" name="ID_TEXTCTRL36" subclass="wxMyTextCtrl" variable="PrismConst" member="yes">
+										<pos>126,64</pos>
+										<handler function="OnPrismConstText" entry="EVT_TEXT" />
+									</object>
+									<object class="wxStaticText" name="ID_STATICTEXT29" variable="StaticText28" member="yes">
+										<label>棱镜位置</label>
+										<pos>32,104</pos>
+									</object>
+									<object class="wxChoice" name="ID_CHOICE2" variable="PrismPos" member="yes">
+										<content>
+											<item>位置I</item>
+											<item>位置II</item>
+											<item>位置III</item>
+										</content>
+										<selection>0</selection>
+										<pos>126,104</pos>
+										<handler function="OnPrismPosSelect" entry="EVT_CHOICE" />
+									</object>
+									<object class="wxButton" name="ID_BUTTON9" variable="Button1" member="yes">
+										<label>导入</label>
+										<pos>488,24</pos>
+										<size>-1,32</size>
+										<handler function="OnBtnImportTarget" entry="EVT_BUTTON" />
+									</object>
+									<object class="wxStaticText" name="ID_STATICTEXT34" variable="StaticText33" member="yes">
+										<label>激光类型</label>
+										<pos>32,144</pos>
+									</object>
+									<object class="wxChoice" name="ID_CHOICE1" variable="LaserType" member="yes">
+										<content>
+											<item>GUS74</item>
+											<item>无棱镜测距</item>
+											<item>外接激光源</item>
+										</content>
+										<selection>0</selection>
+										<pos>126,144</pos>
+									</object>
+									<object class="wxStaticText" name="ID_STATICTEXT35" variable="StaticText34" member="yes">
+										<label>激光高度(mm)</label>
+										<pos>32,184</pos>
+									</object>
+									<object class="wxTextCtrl" name="ID_TEXTCTRL42" subclass="wxMyTextCtrl" variable="LaserHeight" member="yes">
+										<pos>126,184</pos>
+										<handler function="OnLaserHeightText" entry="EVT_TEXT" />
+									</object>
+									<object class="wxStaticText" name="ID_STATICTEXT36" variable="StaticText35" member="yes">
+										<label>校准距离(m)</label>
+										<pos>32,224</pos>
+									</object>
+									<object class="wxTextCtrl" name="ID_TEXTCTRL43" subclass="wxMyTextCtrl" variable="LaserDist" member="yes">
+										<pos>126,224</pos>
+										<handler function="OnLaserDistText" entry="EVT_TEXT" />
+									</object>
+									<object class="wxStaticText" name="ID_STATICTEXT37" variable="StaticText36" member="yes">
+										<label>校准X(mm)</label>
+										<pos>32,264</pos>
+									</object>
+									<object class="wxTextCtrl" name="ID_TEXTCTRL44" subclass="wxMyTextCtrl" variable="LaserX" member="yes">
+										<pos>126,264</pos>
+										<handler function="OnLaserXText" entry="EVT_TEXT" />
+									</object>
+									<object class="wxStaticText" name="ID_STATICTEXT38" variable="StaticText37" member="yes">
+										<label>校准Y(mm)</label>
+										<pos>32,304</pos>
+									</object>
+									<object class="wxTextCtrl" name="ID_TEXTCTRL45" subclass="wxMyTextCtrl" variable="LaserY" member="yes">
+										<pos>126,304</pos>
+										<handler function="OnLaserYText" entry="EVT_TEXT" />
+									</object>
+								</object>
+								<label>激光靶配置</label>
+							</object>
+							<object class="notebookpage">
+								<object class="wxPanel" name="ID_PANEL6" variable="Panel6" member="yes">
+									<object class="wxRadioBox" name="ID_RADIOBOX1" variable="JiaojieType" member="yes">
+										<label>绞接角度获取</label>
+										<content>
+											<item>自动                  </item>
+											<item>手动        </item>
+										</content>
+										<default>-1</default>
+										<pos>32,24</pos>
+										<size>240,64</size>
+										<style>wxRA_VERTICAL</style>
+										<handler function="OnJiaojieTypeSelect" entry="EVT_RADIOBOX" />
+									</object>
+									<object class="wxStaticText" name="ID_STATICTEXT30" variable="StaticText29" member="yes">
+										<label>铰接位置（m）</label>
+										<pos>32,104</pos>
+									</object>
+									<object class="wxTextCtrl" name="ID_TEXTCTRL37" subclass="wxMyTextCtrl" variable="JiaojiePos" member="yes">
+										<pos>126,104</pos>
+										<handler function="OnJiaojiePosText" entry="EVT_TEXT" />
+									</object>
+									<object class="wxStaticText" name="ID_STATICTEXT31" variable="StaticText30" member="yes">
+										<label>铰接角度（度）</label>
+										<pos>32,144</pos>
+									</object>
+									<object class="wxTextCtrl" name="ID_TEXTCTRL38" subclass="wxMyTextCtrl" variable="JiaojieHorizon" member="yes">
+										<pos>126,144</pos>
+										<handler function="OnJiaojieHorizonText" entry="EVT_TEXT" />
+									</object>
+									<object class="wxTextCtrl" name="ID_TEXTCTRL39" subclass="wxMyTextCtrl" variable="JiaojieVertical" member="yes">
+										<pos>254,144</pos>
+										<handler function="OnJiaojieVerticalText" entry="EVT_TEXT" />
+									</object>
+									<object class="wxStaticText" name="ID_STATICTEXT32" variable="StaticText31" member="yes">
+										<label>正值为向右，负值为向左</label>
+										<pos>126,176</pos>
+									</object>
+									<object class="wxStaticText" name="ID_STATICTEXT33" variable="StaticText32" member="yes">
+										<label>至切口</label>
+										<pos>248,104</pos>
+									</object>
+								</object>
+								<label>绞接设置</label>
+							</object>
+							<object class="notebookpage">
+								<object class="wxPanel" name="ID_PANEL3" variable="Panel3" member="yes">
+									<object class="wxStaticBox" name="ID_STATICBOX1" variable="StaticBox1" member="yes">
+										<label>周期</label>
+										<pos>10,10</pos>
+										<size>500,120</size>
+									</object>
+									<object class="wxStaticText" name="ID_STATICTEXT7" variable="StaticText7" member="yes">
+										<label>姿态测量(秒)</label>
+										<pos>24,40</pos>
+									</object>
+									<object class="wxTextCtrl" name="ID_TEXTCTRL6" subclass="wxMyTextCtrl" variable="textMeaCycle" member="yes">
+										<pos>150,40</pos>
+										<size>150,30</size>
+										<handler function="OntextMeaCycleText" entry="EVT_TEXT" />
+									</object>
+									<object class="wxStaticText" name="ID_STATICTEXT8" variable="StaticText8" member="yes">
+										<label>后视检核(秒)</label>
+										<pos>24,80</pos>
+									</object>
+									<object class="wxTextCtrl" name="ID_TEXTCTRL7" subclass="wxMyTextCtrl" variable="textCheckCycle" member="yes">
+										<pos>150,80</pos>
+										<size>150,30</size>
+										<handler function="OntextCheckCycleText" entry="EVT_TEXT" />
+									</object>
+									<object class="wxStaticBox" name="ID_STATICBOX2" variable="StaticBox2" member="yes">
+										<label>限差</label>
+										<pos>10,140</pos>
+										<size>500,160</size>
+									</object>
+									<object class="wxStaticText" name="ID_STATICTEXT9" variable="StaticText9" member="yes">
+										<label>平面偏差(毫米)</label>
+										<pos>24,170</pos>
+									</object>
+									<object class="wxStaticText" name="ID_STATICTEXT10" variable="StaticText10" member="yes">
+										<label>高程偏差(毫米)</label>
+										<pos>24,210</pos>
+									</object>
+									<object class="wxTextCtrl" name="ID_TEXTCTRL8" subclass="wxMyTextCtrl" variable="textHdiffTol" member="yes">
+										<pos>150,170</pos>
+										<size>150,30</size>
+										<handler function="OntextHdiffTolText" entry="EVT_TEXT" />
+									</object>
+									<object class="wxTextCtrl" name="ID_TEXTCTRL9" subclass="wxMyTextCtrl" variable="textVdiffTol" member="yes">
+										<pos>150,210</pos>
+										<size>150,30</size>
+										<handler function="OntextVdiffTolText" entry="EVT_TEXT" />
+									</object>
+									<object class="wxStaticText" name="ID_STATICTEXT11" variable="StaticText11" member="yes">
+										<label>后视检核(毫米)</label>
+										<pos>24,250</pos>
+									</object>
+									<object class="wxTextCtrl" name="ID_TEXTCTRL10" subclass="wxMyTextCtrl" variable="textCheckTol" member="yes">
+										<pos>150,250</pos>
+										<size>150,30</size>
+										<handler function="OntextCheckTolText" entry="EVT_TEXT" />
+									</object>
+								</object>
+								<label>测量设置</label>
+							</object>
+							<object class="notebookpage">
+								<object class="wxPanel" name="ID_PANEL4" variable="Panel4" member="yes">
+									<object class="wxStaticBox" name="ID_STATICBOX3" variable="StaticBox3" member="yes">
+										<label>盾构姿态</label>
+										<pos>10,10</pos>
+										<size>550,190</size>
+									</object>
+									<object class="wxStaticText" name="ID_STATICTEXT12" variable="StaticText12" member="yes">
+										<label>盾首坐标</label>
+										<pos>24,32</pos>
+									</object>
+									<object class="wxTextCtrl" name="ID_TEXTCTRL11" subclass="wxMyTextCtrl" variable="textHeadX" member="yes">
+										<pos>100,32</pos>
+										<size>120,30</size>
+										<handler function="OntextHeadXText" entry="EVT_TEXT" />
+									</object>
+									<object class="wxTextCtrl" name="ID_TEXTCTRL12" subclass="wxMyTextCtrl" variable="textHeadY" member="yes">
+										<pos>240,32</pos>
+										<size>120,30</size>
+										<handler function="OntextHeadYText" entry="EVT_TEXT" />
+									</object>
+									<object class="wxTextCtrl" name="ID_TEXTCTRL13" subclass="wxMyTextCtrl" variable="textHeadZ" member="yes">
+										<pos>380,32</pos>
+										<size>120,30</size>
+										<handler function="OntextHeadZText" entry="EVT_TEXT" />
+									</object>
+									<object class="wxStaticText" name="ID_STATICTEXT13" variable="StaticText13" member="yes">
+										<label>盾尾坐标</label>
+										<pos>24,72</pos>
+									</object>
+									<object class="wxTextCtrl" name="ID_TEXTCTRL14" subclass="wxMyTextCtrl" variable="textTailX" member="yes">
+										<pos>100,72</pos>
+										<size>120,30</size>
+										<handler function="OntextTailXText" entry="EVT_TEXT" />
+									</object>
+									<object class="wxTextCtrl" name="ID_TEXTCTRL15" subclass="wxMyTextCtrl" variable="textTailY" member="yes">
+										<pos>240,72</pos>
+										<size>120,30</size>
+										<handler function="OntextTailYText" entry="EVT_TEXT" />
+									</object>
+									<object class="wxTextCtrl" name="ID_TEXTCTRL16" subclass="wxMyTextCtrl" variable="textTailZ" member="yes">
+										<pos>380,72</pos>
+										<size>120,30</size>
+										<handler function="OntextTailZText" entry="EVT_TEXT" />
+									</object>
+									<object class="wxStaticText" name="ID_STATICTEXT14" variable="StaticText14" member="yes">
+										<label>滚动角（度）</label>
+										<pos>24,114</pos>
+									</object>
+									<object class="wxTextCtrl" name="ID_TEXTCTRL17" subclass="wxMyTextCtrl" variable="textRoll" member="yes">
+										<pos>100,114</pos>
+										<size>120,30</size>
+										<handler function="OntextRollText" entry="EVT_TEXT" />
+									</object>
+									<object class="wxStaticBox" name="ID_STATICBOX4" variable="StaticBox4" member="yes">
+										<label>零位测量</label>
+										<pos>10,200</pos>
+										<size>550,170</size>
+									</object>
+									<object class="wxStaticText" name="ID_STATICTEXT15" variable="StaticText15" member="yes">
+										<label>棱镜坐标</label>
+										<pos>24,224</pos>
+									</object>
+									<object class="wxTextCtrl" name="ID_TEXTCTRL18" subclass="wxMyTextCtrl" variable="textPrismX" member="yes">
+										<pos>96,216</pos>
+										<size>120,30</size>
+										<style>wxTE_READONLY</style>
+									</object>
+									<object class="wxTextCtrl" name="ID_TEXTCTRL19" subclass="wxMyTextCtrl" variable="textPrismY" member="yes">
+										<pos>240,216</pos>
+										<size>120,30</size>
+										<style>wxTE_READONLY</style>
+									</object>
+									<object class="wxTextCtrl" name="ID_TEXTCTRL20" subclass="wxMyTextCtrl" variable="textPrismZ" member="yes">
+										<pos>384,216</pos>
+										<size>120,30</size>
+										<style>wxTE_READONLY</style>
+									</object>
+									<object class="wxStaticText" name="ID_STATICTEXT16" variable="StaticText16" member="yes">
+										<label>激光靶</label>
+										<pos>24,264</pos>
+									</object>
+									<object class="wxTextCtrl" name="ID_TEXTCTRL21" subclass="wxMyTextCtrl" variable="textTargetX1" member="yes">
+										<pos>96,256</pos>
+										<size>120,30</size>
+										<style>wxTE_READONLY</style>
+									</object>
+									<object class="wxTextCtrl" name="ID_TEXTCTRL22" subclass="wxMyTextCtrl" variable="textTargetY1" member="yes">
+										<pos>240,256</pos>
+										<size>120,30</size>
+										<style>wxTE_READONLY</style>
+									</object>
+									<object class="wxStaticText" name="ID_STATICTEXT17" variable="StaticText17" member="yes">
+										<label>倾斜仪</label>
+										<pos>24,344</pos>
+									</object>
+									<object class="wxTextCtrl" name="ID_TEXTCTRL23" subclass="wxMyTextCtrl" variable="textInclineX" member="yes">
+										<pos>96,336</pos>
+										<size>120,30</size>
+										<style>wxTE_READONLY</style>
+									</object>
+									<object class="wxTextCtrl" name="ID_TEXTCTRL24" subclass="wxMyTextCtrl" variable="textInclineY" member="yes">
+										<pos>240,336</pos>
+										<size>120,30</size>
+										<style>wxTE_READONLY</style>
+									</object>
+									<object class="wxTextCtrl" name="ID_TEXTCTRL25" subclass="wxMyTextCtrl" variable="textTargetX2" member="yes">
+										<pos>384,256</pos>
+										<size>120,30</size>
+										<style>wxTE_READONLY</style>
+									</object>
+									<object class="wxTextCtrl" name="ID_TEXTCTRL26" subclass="wxMyTextCtrl" variable="textTargetY2" member="yes">
+										<pos>96,296</pos>
+										<size>120,30</size>
+										<style>wxTE_READONLY</style>
+									</object>
+									<object class="wxButton" name="ID_BUTTON4" variable="btnMea" member="yes">
+										<label>测量</label>
+										<pos>384,336</pos>
+										<size>120,30</size>
+										<handler function="OnBtnMea" entry="EVT_BUTTON" />
+									</object>
+									<object class="wxTextCtrl" name="ID_TEXTCTRL33" subclass="wxMyTextCtrl" variable="textAngle1" member="yes">
+										<pos>240,296</pos>
+										<size>120,30</size>
+									</object>
+									<object class="wxTextCtrl" name="ID_TEXTCTRL34" subclass="wxMyTextCtrl" variable="textAngle2" member="yes">
+										<pos>384,296</pos>
+										<size>120,30</size>
+									</object>
+									<object class="wxStaticText" name="ID_STATICTEXT27" variable="StaticText26" member="yes">
+										<label>铰接角（度）</label>
+										<pos>24,158</pos>
+									</object>
+									<object class="wxTextCtrl" name="ID_TEXTCTRL40" subclass="wxMyTextCtrl" variable="textJiaojieH" member="yes">
+										<pos>100,158</pos>
+										<size>120,30</size>
+										<handler function="OntextJiaojieHText" entry="EVT_TEXT" />
+									</object>
+									<object class="wxTextCtrl" name="ID_TEXTCTRL41" subclass="wxMyTextCtrl" variable="textJiaojieV" member="yes">
+										<pos>240,158</pos>
+										<size>120,30</size>
+										<handler function="OntextJiaojieVText" entry="EVT_TEXT" />
+									</object>
+								</object>
+								<label>零位数据</label>
+							</object>
+							<object class="notebookpage">
+								<object class="wxPanel" name="ID_PANEL5" variable="Panel5" member="yes">
+									<object class="wxStaticBox" name="ID_STATICBOX6" variable="StaticBox6" member="yes">
+										<label>操作员</label>
+										<pos>300,10</pos>
+										<size>250,200</size>
+									</object>
+									<object class="wxStaticBox" name="ID_STATICBOX5" variable="StaticBox5" member="yes">
+										<label>管理员</label>
+										<pos>10,10</pos>
+										<size>250,200</size>
+									</object>
+									<object class="wxStaticText" name="ID_STATICTEXT18" variable="StaticText18" member="yes">
+										<label>原密码</label>
+										<pos>32,32</pos>
+									</object>
+									<object class="wxTextCtrl" name="ID_TEXTCTRL27" subclass="wxMyTextCtrl" variable="textAdmOldPsw" member="yes">
+										<pos>120,32</pos>
+										<size>120,30</size>
+										<style>wxTE_PASSWORD</style>
+									</object>
+									<object class="wxStaticText" name="ID_STATICTEXT19" variable="StaticText19" member="yes">
+										<label>新密码</label>
+										<pos>32,72</pos>
+									</object>
+									<object class="wxTextCtrl" name="ID_TEXTCTRL28" subclass="wxMyTextCtrl" variable="textAdmNewPsw1" member="yes">
+										<pos>120,72</pos>
+										<size>120,30</size>
+										<style>wxTE_PASSWORD</style>
+									</object>
+									<object class="wxStaticText" name="ID_STATICTEXT20" variable="StaticText20" member="yes">
+										<label>确认新密码</label>
+										<pos>32,112</pos>
+									</object>
+									<object class="wxTextCtrl" name="ID_TEXTCTRL29" subclass="wxMyTextCtrl" variable="textAdmNewPsw2" member="yes">
+										<pos>120,112</pos>
+										<size>120,30</size>
+										<style>wxTE_PASSWORD</style>
+									</object>
+									<object class="wxButton" name="ID_BUTTON5" variable="btnModify" member="yes">
+										<label>修改</label>
+										<pos>32,160</pos>
+										<size>-1,32</size>
+										<handler function="OnBtnModify" entry="EVT_BUTTON" />
+									</object>
+									<object class="wxButton" name="ID_BUTTON6" variable="btnReset" member="yes">
+										<label>重置</label>
+										<pos>150,160</pos>
+										<size>-1,32</size>
+										<handler function="OnBtnReset" entry="EVT_BUTTON" />
+									</object>
+									<object class="wxStaticText" name="ID_STATICTEXT23" variable="StaticText22" member="yes">
+										<label>原密码</label>
+										<pos>320,32</pos>
+									</object>
+									<object class="wxTextCtrl" name="ID_TEXTCTRL30" subclass="wxMyTextCtrl" variable="textDriOldPsw" member="yes">
+										<pos>400,32</pos>
+										<size>120,30</size>
+										<style>wxTE_PASSWORD</style>
+									</object>
+									<object class="wxTextCtrl" name="ID_TEXTCTRL31" subclass="wxMyTextCtrl" variable="textDriNewPsw1" member="yes">
+										<pos>400,72</pos>
+										<size>120,30</size>
+										<style>wxTE_PASSWORD</style>
+									</object>
+									<object class="wxTextCtrl" name="ID_TEXTCTRL32" subclass="wxMyTextCtrl" variable="textDriNewPsw2" member="yes">
+										<pos>400,112</pos>
+										<size>120,30</size>
+										<style>wxTE_PASSWORD</style>
+									</object>
+									<object class="wxButton" name="ID_BUTTON7" variable="btnModify1" member="yes">
+										<label>修改</label>
+										<pos>336,160</pos>
+										<size>-1,32</size>
+										<handler function="OnbtnModify1Click" entry="EVT_BUTTON" />
+									</object>
+									<object class="wxButton" name="ID_BUTTON8" variable="btnReset1" member="yes">
+										<label>重置</label>
+										<pos>448,160</pos>
+										<size>-1,32</size>
+										<handler function="OnbtnReset1Click" entry="EVT_BUTTON" />
+									</object>
+									<object class="wxStaticText" name="ID_STATICTEXT24" variable="StaticText23" member="yes">
+										<label>新密码</label>
+										<pos>320,72</pos>
+									</object>
+									<object class="wxStaticText" name="ID_STATICTEXT25" variable="StaticText24" member="yes">
+										<label>确认新密码</label>
+										<pos>320,112</pos>
+									</object>
+								</object>
+								<label>密码安全</label>
+							</object>
+							<object class="notebookpage">
+								<object class="wxPanel" name="ID_PANEL7" variable="Panel7" member="yes">
+									<pos>402,8</pos>
+									<object class="wxStaticText" name="ID_STATICTEXT39" variable="StaticText38" member="yes">
+										<label>语言</label>
+										<pos>24,24</pos>
+									</object>
+									<object class="wxChoice" name="ID_CHOICE3" variable="ChoiceLanguage" member="yes">
+										<content>
+											<item>简体中文</item>
+											<item>繁体中文</item>
+											<item>英文</item>
+										</content>
+										<selection>0</selection>
+										<pos>80,24</pos>
+										<handler function="OnChoiceLanguageSelect" entry="EVT_CHOICE" />
+									</object>
+								</object>
+								<label>语言</label>
+							</object>
+						</object>
+						<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+						<border>5</border>
+						<option>1</option>
+					</object>
+				</object>
+				<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+				<border>5</border>
+				<option>1</option>
+			</object>
+			<object class="sizeritem">
+				<object class="wxStaticLine" name="ID_STATICLINE2" variable="StaticLine2" member="yes">
+					<size>600,-1</size>
+				</object>
+				<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+				<border>5</border>
+				<option>1</option>
+			</object>
+			<object class="sizeritem">
+				<object class="wxStaticText" name="ID_STATICTEXT21" variable="StaticText21" member="yes">
+					<label>信息</label>
+					<font>
+						<size>10</size>
+						<style>normal</style>
+						<weight>bold</weight>
+						<underlined>0</underlined>
+						<family>swiss</family>
+					</font>
+				</object>
+				<flag>wxALL|wxALIGN_LEFT|wxALIGN_CENTER_VERTICAL</flag>
+				<border>5</border>
+				<option>1</option>
+			</object>
+			<object class="sizeritem">
+				<object class="wxStaticText" name="ID_STATICTEXT22" variable="textMsg" member="yes">
+					<label></label>
+					<size>600,20</size>
+				</object>
+				<flag>wxALL|wxALIGN_LEFT|wxALIGN_CENTER_VERTICAL</flag>
+				<border>5</border>
+				<option>1</option>
+			</object>
+			<object class="sizeritem">
+				<object class="wxStaticLine" name="ID_STATICLINE3" variable="StaticLine3" member="yes">
+					<size>600,-1</size>
+				</object>
+				<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+				<border>5</border>
+				<option>1</option>
+			</object>
+			<object class="sizeritem">
+				<object class="wxFlexGridSizer" variable="FlexGridSizer2" member="no">
+					<cols>4</cols>
+					<object class="sizeritem">
+						<object class="wxButton" name="ID_BUTTON3" variable="btnProj" member="yes">
+							<label>工程</label>
+							<size>-1,32</size>
+							<handler function="OnBtnProj" entry="EVT_BUTTON" />
+						</object>
+						<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+						<border>5</border>
+						<option>1</option>
+					</object>
+					<object class="spacer">
+						<flag>wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+						<border>5</border>
+						<option>1</option>
+						<size>350,-1</size>
+					</object>
+					<object class="sizeritem">
+						<object class="wxButton" name="ID_BUTTON1" variable="btnApply" member="yes">
+							<label>应用</label>
+							<size>-1,32</size>
+							<handler function="OnBtnApply" entry="EVT_BUTTON" />
+						</object>
+						<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+						<border>5</border>
+						<option>1</option>
+					</object>
+					<object class="sizeritem">
+						<object class="wxButton" name="ID_BUTTON2" variable="btnQuit" member="yes">
+							<label>退出</label>
+							<size>-1,32</size>
+							<handler function="OnBtnQuit" entry="EVT_BUTTON" />
+						</object>
+						<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+						<border>5</border>
+						<option>1</option>
+					</object>
+				</object>
+				<flag>wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+				<border>5</border>
+				<option>1</option>
+			</object>
+		</object>
+	</object>
+</wxsmith>
